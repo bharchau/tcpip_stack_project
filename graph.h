@@ -6,6 +6,7 @@
 #include "gluethread/glthread.h"
 #include <stdlib.h>
 #include <string.h>
+#include "net.h"
 
 typedef struct node_ node_t;
 typedef struct link_ link_t;
@@ -19,6 +20,7 @@ typedef struct interface_ {
     char if_name[IF_NAME_SIZE];
     struct link_ *link;
     struct node_ *att_node;
+    intf_nw_props_t intf_nw_props;
 } interface_t;
 
 struct link_ {
@@ -31,6 +33,7 @@ struct node_ {
     char node_name[NODE_NAME_SIZE];
     interface_t *intf[MAX_INTF_PER_NODE];
     glthread_t graph_glue;
+    node_nw_prop_t node_nw_prop;
 };
 
 typedef struct graph_ {
