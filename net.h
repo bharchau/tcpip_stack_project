@@ -71,5 +71,10 @@ interface_assign_mac_address(interface_t *interface);
 void dump_nw_graph(graph_t *graph);
 void dump_node_nw_props(node_t *node);
 void dump_intf_props(interface_t *interface);
+interface_t *
+node_get_matching_subnet_interface(node_t *node, char *ip_addr);
+
+unsigned int 
+convert_ip_from_str_to_int(char *ip_addr);
 
 #endif
