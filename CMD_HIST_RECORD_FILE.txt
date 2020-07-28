@@ -9,3 +9,4 @@ run node R2 resolve-arp 122.1.1.1[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D
 run node R1_re resolve-arp 122.1.1.1
 .
 show topology
+.
